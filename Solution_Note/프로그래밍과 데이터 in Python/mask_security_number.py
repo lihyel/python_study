@@ -1,13 +1,12 @@
 def mask_security_number(security_number):
-    # 여기에 코드를 작성하세요
-    public_number = [] 
-    for i in security_number[0:-4]:
-        public_number.append(i)
-    for i in security_number[-4:]:
-        public_number.append('*')
-    #print(public_number)
-    str_number = ''.join(str(s) for s in public_number)
-    return str_number
+    num_list = list(security_number)
+
+    # 마지막 네 값을 *로 대체
+    for i in range(len(num_list) - 4, len(num_list)):
+        num_list[i] = '*'
+
+    # 리스트를 문자열로 복구하여 반환
+    return ''.join(num_list) #간단하게!
     
     
 # 테스트 코드
