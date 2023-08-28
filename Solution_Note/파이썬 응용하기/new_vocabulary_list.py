@@ -39,4 +39,3 @@ while True:
         print("정답입니다!\n")
     else:
         print("틀렸습니다. 정답은 {}입니다.\n".format(english_word))
-이번 레슨은 어땠나요?
